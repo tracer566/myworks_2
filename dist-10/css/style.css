@@ -1562,3 +1562,7 @@ background: radial-gradient(ellipse at center, #72DC71, #28F7C6);
 .orange{
   background-color: orange;
 }
+
+.section-main{
+  background-attachment:fixed;
+}
