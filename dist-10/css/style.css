@@ -604,7 +604,7 @@ z-index: 2;
 	.arrows__left{
 		position: absolute;
 		top:49%;
-		left: 0;
+		left: 20px;
 		cursor:pointer;
 		text-align: center;
 		color:#333;
@@ -625,7 +625,7 @@ z-index: 2;
 	.arrows__right{
 		position: absolute;
 		top:49%;
-		right: 0;
+		right: 20px;
 		cursor:pointer;
 		text-align: center;
 		color:#333;
@@ -1217,11 +1217,19 @@ margin-left: 5rem;
     min-height: 400px
 }
 
-
-
-		.section-9{
-			min-height: 801px;
+.section-9{
+		min-height: 801px;
 		}
+
+.arrows__left{
+    left: 0 !important;
+  }
+    
+  .arrows__right {
+     right: 0 !important;
+    }
+
+  
 
 /*---------------мобильное меню---------------*/
 .visible-md{
@@ -1385,12 +1393,10 @@ background: radial-gradient(ellipse at center, #72DC71, #28F7C6);
 	max-height: 60rem;
 }
 
-
 .slider{
 	display: flex;
 	width: 80%;
 	margin: auto;
-
 }
 
 .slider__block{
@@ -1441,8 +1447,6 @@ background: radial-gradient(ellipse at center, #72DC71, #28F7C6);
 	.contacts{
 		padding: 20px;
 	}
-
-
 }
 
 @media (max-width: 420px){
@@ -1474,9 +1478,18 @@ background: radial-gradient(ellipse at center, #72DC71, #28F7C6);
   margin-bottom: 1.5rem;
 }
 
+.arrows__left{
+  left: 0 !important;
+}
+
+.arrows__right {
+  right: 0 !important;
+}
+
 .arrows__left img{
   width: 60px !important;
 }
+
 .arrows__right img{
   width: 60px !important;
 }
@@ -1485,8 +1498,52 @@ background: radial-gradient(ellipse at center, #72DC71, #28F7C6);
   max-width: 100% !important;
 }
 
-
+/* секция наше производство */
+.section-production {
+  min-height: 442px;
+  font-size: 1.9rem;
 }
+
+.slider-production__img{
+  max-width: 290px;
+}
+
+.slider-production__block{
+  margin-left:2rem !important;
+  /* margin-right: 2rem !important; */
+} 
+
+.arrows-prod__left{
+  top: 90% !important;
+}
+
+.arrows-prod__right{
+  top: 90% !important;
+}
+
+/* каталог искуственных елок */
+.slider__cart img {
+  object-fit: contain;
+}
+
+.slider-button {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  
+}
+
+.slider__cart h4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.slider-catalog-8 .slider__cart{
+  min-height: 490px;
+  max-height: 490px;
+  min-width: 151px;
+  
+}
+
 
 .lock {
   overflow-y: hidden;
