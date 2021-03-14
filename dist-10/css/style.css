@@ -571,7 +571,8 @@ z-index: 2;
 .slider__cart img{
 	width: 100%;
 	height: 230px;
-	object-fit: fill;
+	object-fit: contain;
+	/* object-fit: cover; */
 		}
 
 	.slider__cart h4{
@@ -1449,14 +1450,42 @@ background: radial-gradient(ellipse at center, #72DC71, #28F7C6);
 		font-size: 7px;
 	}
 
+  .section-main {
+    background-size: 100% 40%;
+    min-height: 600px;
+}
+
 	.header{
 			min-height: 24rem;
 		}
 
+  .section-2 {
+      min-height: 750px;
+  }
+
 		.slider-our__block {
     min-width: 234px;
     max-width: 320px;
+    min-height:500px;
 }
+
+.img-mini{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.arrows__left img{
+  width: 60px !important;
+}
+.arrows__right img{
+  width: 60px !important;
+}
+
+.section-5__button {
+  max-width: 100% !important;
+}
+
+
 }
 
 .lock {
