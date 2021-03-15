@@ -678,6 +678,7 @@ background-color: #F4F4F4;
 		padding: 8px;
 		opacity: 70%;
 		padding-right: 3rem;
+    width: 70px;
 	}
 
 	.arrows-2__right img{
@@ -685,6 +686,7 @@ background-color: #F4F4F4;
 		padding: 8px;
 		opacity: 70%;
 		padding-left: 3rem;
+    width: 70px;
 	}
 
 
@@ -751,6 +753,7 @@ background-color: #F4F4F4;
 		padding: 8px;
 		opacity: 70%;
 		padding-right: 3rem;
+    width: 70px;
 	}
 
 	.arrows-3__right img{
@@ -758,12 +761,10 @@ background-color: #F4F4F4;
 		padding: 8px;
 		opacity: 70%;
 		padding-left: 3rem;
+    width: 70px;
 	}
 
 .slider-3__cart img{
-	/*min-width: 100%;*/
-	/*max-width: 100%;*/
-	/*height: 55%;*/
 	object-fit: fill;
 }
 
