@@ -816,6 +816,7 @@ background-color: #F4F4F4;
 		padding: 8px;
 		opacity: 70%;
 		padding-right: 3rem;
+    width: 70px;
 	}
 
 	.arrows-4__right img{
@@ -823,6 +824,7 @@ background-color: #F4F4F4;
 		padding: 8px;
 		opacity: 70%;
 		padding-left: 3rem;
+    width: 70px;
 	}
 
 	/*----------------------------------/section-map--------------------------------*/
