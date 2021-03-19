@@ -1,0 +1,180 @@
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   background: #010202;
+   font-family: 'Source Sans Pro', sans-serif;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ .header {
+   width: 90%;
+   max-width: 1146px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 56px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .logo {
+   display: block;
+ }
+
+ .user {
+   font-size: 16px;
+   line-height: 20px;
+   display: flex;
+   align-items: center;
+   color: #FFFFFF;
+ }
+
+ .user-photo {
+   width: 40px;
+   height: 40px;
+   object-fit: cover;
+   object-position: 50% 10%;
+   border-radius: 50%;
+   margin-left: 15px;
+ }
+
+ .app {
+   background: linear-gradient(90deg, #010202 0%, #010202 43%, rgba(1, 2, 2, 0.2) 80.9%);
+   /* url('../img/cover-image.jpg'); */
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   background-position-x: right;
+   background-position-y: center;
+   background-size: contain;
+   color: white;
+ }
+
+ .film {
+   width: 90%;
+   max-width: 1146px;
+   margin: auto;
+   /* дополнительное задание */
+   max-height: calc(100vh - 9.5rem);
+   padding: 6% 0;
+ }
+
+ .tags {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   Line-height: 22, 4px;
+   flex-wrap: wrap;
+ }
+
+ /* отступы элементов внутри тега span */
+ .tags>* {
+   margin-right: 15px;
+   opacity: 0.4;
+   font-weight: 400;
+   font-size: 16px;
+   margin-bottom: 10px;
+ }
+
+ span.age {
+   padding: 1px 5px;
+   border: 1px solid rgba(255, 255, 255, 0.4);
+   box-sizing: border-box;
+   border-radius: 2px;
+ }
+
+ .descr {
+   max-width: 460px;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 21px;
+   line-height: 140%;
+   margin-bottom: 36px;
+ }
+
+ .button {
+   padding: 11px 26px;
+   border-radius: 6px;
+   color: #fff;
+   outline: none;
+   cursor: pointer;
+   border: none;
+   font-size: 16px;
+   line-height: 140%;
+ }
+
+ .button-primery {
+   margin-right: 15px;
+   background-color: #EA6E20;
+ }
+
+ .button-default {
+   background-color: #2F2F2F;
+ }
+
+ .button-icon {
+   vertical-align: -2px;
+   margin-right: 10px;
+ }
+
+ /* возникает перескок во время уменьшения экрана,когда видео ставишь, из за этого правила */
+ /* @media(max-width:992px) {
+   .app {
+     background-size: 50%;
+   }
+ } */
+
+ @media(max-width:768px) {
+   .app {
+     height: auto;
+     padding-bottom: 400px;
+
+   }
+
+   .descr {
+     font-size: 16px;
+     max-width: 333px;
+   }
+ }
+
+ @media(max-width:576px) {
+   .app {
+     padding-bottom: 350px;
+
+   }
+
+   .user-name {
+     display: none;
+   }
+
+   .film-logo {
+     max-width: 100%;
+   }
+
+   .button {
+     margin-bottom: 10px;
+   }
+
+   .button-text {
+     display: none;
+   }
+
+   .button-default {
+     padding: 11px 14px;
+   }
+
+   .button-icon {
+     margin-right: 0px;
+   }
+ }
+
+ @media(max-width:445px) {
+   .app {
+     padding-bottom: 380px;
+
+   }
+ }
