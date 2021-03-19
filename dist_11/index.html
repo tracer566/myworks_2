@@ -37,7 +37,7 @@
   Продолжение легендарного фильма из 90-х. Предстоит по-настоящему смертельная битва, где останется только сильнейший
 </p>
 <div class="button-group">
-  <button class="button button-primery">Предзаказ фильма</button>
+  <button id="button-primery" class="button button-primery">Предзаказ фильма</button>
   <a  data-fancybox href="https://www.youtube.com/watch?v=NYH2sLid0Zc" class="button button-default">
     <img src="img/Vector.svg" alt="play" class="button-icon">
     <span class="button-text">
@@ -50,6 +50,22 @@
   <!-- /.film -->
 
 </div>
+
+<div class="modal" id="modal">
+	<div class="modal-form">
+		<li id="close" class="modal-form__close">&times;</li>
+		<p class="modal-form__text">
+			Будьте одними из первых кто увидит этот фильм!
+		</p>
+
+		<input type="email"
+		 class="modal-form__input input_2" value="Ваш email">
+		<!-- /.modal-form__text -->
+		<button class="button-o">
+			Подписаться
+		</button>
+	</div>
+	<!-- /.modal-form -->
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
