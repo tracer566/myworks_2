@@ -45,7 +45,6 @@
 
  .app {
    background: linear-gradient(90deg, #010202 0%, #010202 43%, rgba(1, 2, 2, 0.2) 80.9%);
-   /* url('../img/cover-image.jpg'); */
    min-height: 100vh;
    background-repeat: no-repeat;
    background-position-x: right;
@@ -213,7 +212,12 @@
    .app {
      height: auto;
      padding-bottom: 400px;
+     background: url('../img/cover-image.jpg') bottom center /50% no-repeat;
+   }
 
+   /* посмотреть в панели разработчика где этот блок */
+   video {
+     display: none;
    }
 
    .descr {
@@ -224,7 +228,6 @@
    .modal-form {
      font-size: 16px;
      padding: 20px;
-     min-height: 400px;
    }
 
    .modal-form__input {
@@ -240,6 +243,7 @@
  @media(max-width:576px) {
    .app {
      padding-bottom: 350px;
+     background-size: 300px;
 
    }
 
