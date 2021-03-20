@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $('#app').vide({
-    mp4: '../video/video.mp4',
-    webm: '../video/video.webm',
-    ogv: '../video/video.ogv'
+    mp4: '../dist_11/video/video.mp4',
+    webm: '../dist_11//video/video.webm',
+    ogv: '../dist_11//video/video.ogv'
     // poster: '../img/cover-image.jpg'
   })
 });
