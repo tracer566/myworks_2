@@ -1,7 +1,18 @@
+* {
+  transition: all 0.5s;
+}
+
 body {
   font-family: "Proxima Nova", "Arial", sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.active {
+  background-color: aqua;
 }
 
 html, body {
@@ -175,17 +186,77 @@ input {
 
 .modal {
   position: fixed;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  display: none;
+  height: 0;
+  z-index: 99;
+  transition: all 1.2s;
 }
-.modal_active {
-  display: flex;
+.modal-block {
+  background-color: #103352;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  max-width: 580px;
+  padding-bottom: 15px;
+  transition: all 1.2s;
+  transform: translate(-50%, -250%) perspective(400px) rotateY(380deg);
+}
+.modal-block_active {
+  transform: translate(-50%, -50%);
+}
+.modal-block__span {
+  font-size: 0.8rem;
+}
+.modal-block__span a {
+  color: orange;
+}
+.modal-block__btn {
+  padding: 1rem 5rem;
+  margin-bottom: 1rem;
+}
+.modal-block__title {
+  background-color: #ffbc3c;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.modal-block__close {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  font-size: 3.2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.form-wrap {
+  padding: 2rem 1rem 1rem 1rem;
+}
+.form-wrap form input {
+  padding: 1rem 3.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.close__link {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 .header {
@@ -193,6 +264,8 @@ input {
   color: #fff;
   padding-top: 16px;
   padding-bottom: 16px;
+  position: relative;
+  z-index: 4;
 }
 .header__time {
   font-size: 0.9rem;
@@ -385,7 +458,7 @@ input:disabled {
 .section-6-icon__img {
   border: 1px solid #fff;
   border-radius: 50%;
-  max-width: 130px;
+  max-width: 120px;
   padding: 40px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -414,22 +487,23 @@ input:disabled {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 .block-questions__div {
   text-align: left;
 }
 .block-questions__ol {
   list-style: none;
-  line-height: 5rem;
+  line-height: 6rem;
   counter-reset: Counter;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .block-questions__ol li {
   text-decoration: underline;
 }
 .block-questions__ol li:hover {
   cursor: pointer;
-  color: #579eff;
+  color: #f7b516;
 }
 .block-questions__ol li:before {
   counter-increment: Counter;
@@ -456,6 +530,40 @@ input:disabled {
   vertical-align: 5px;
   margin-left: 10px;
   font-weight: bold;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+.tooltip::after {
+  content: attr(data-answer);
+  display: block;
+  position: absolute;
+  color: #ffff;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  font-size: 1rem;
+  line-height: 14px;
+  top: 65%;
+  left: 50%;
+  margin-left: -150px;
+  font-family: "Proxima Nova Lt";
+  letter-spacing: 1px;
+  padding: 8px;
+  border-radius: 10%;
+  box-shadow: 0px 0px 10px rgba(255, 188, 60, 0.7);
+  transition: all 0.8s;
+  opacity: 0;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+.tooltip:hover::before {
+  opacity: 0;
 }
 
 .section-8 {
@@ -533,7 +641,13 @@ input:disabled {
 }
 
 .section-map {
+  background-color: #08243f;
   min-height: 350px;
+}
+.section-map iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
 }
 
 .footer {
@@ -552,6 +666,115 @@ input:disabled {
 .contact-block span:last-child {
   font-size: 1.4rem;
   font-family: "Proxima Nova Bl";
+}
+
+.footer__link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  opacity: 0.6;
+}
+.arrow-up:hover {
+  opacity: 0.99;
+}
+.arrow-up:focus-within {
+  box-shadow: 0px 0px 5px #ffbc3c;
+  border-radius: 50%;
+}
+
+.menu-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 5;
+}
+.menu-link span, .menu-link span::before, .menu-link span::after {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  margin-left: -13px;
+  top: 50%;
+  margin-top: -1px;
+}
+.menu-link span::before {
+  transition: all 0.8s;
+  content: "";
+  margin-top: -10px;
+}
+.menu-link span::after {
+  transition: all 0.8s;
+  content: "";
+  margin-top: 7px;
+}
+.menu-link_active span {
+  background-color: transparent;
+}
+.menu-link_active span::before {
+  transform: rotate(675deg);
+  margin-top: 0;
+}
+.menu-link_active span::after {
+  transform: rotate(-675deg);
+  margin-top: 0;
+}
+
+.menu {
+  background-image: linear-gradient(105.3deg, #1e276b 21.8%, #4d76dd 100.2%);
+  text-align: center;
+  font-size: 1.4rem;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0;
+  transform: translateY(-200%);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  text-transform: uppercase;
+}
+.menu li {
+  margin-bottom: 20px;
+  margin-top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.menu li:last-child {
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 20px 90px;
+}
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.menu li:last-child:hover {
+  background-color: orange;
+}
+.menu li:last-child:hover a {
+  color: black;
+}
+.menu a {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.menu_active {
+  transform: none;
+  position: static;
 }
 
 @media (max-width: 990px) {
@@ -638,6 +861,11 @@ input:disabled {
   .form-block__textarea {
     background: url("../img/section-2/clock_(12)_59.png") 90% 0px no-repeat;
   }
+
+  .arrow-up {
+    width: 60px;
+    filter: invert(100%);
+  }
 }
 @media (max-width: 476px) {
   .header {
@@ -711,5 +939,15 @@ input:disabled {
   .main-info__icon {
     margin-right: 1px;
     margin-left: 1px;
+  }
+
+  .form-block__form textarea {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .menu-link {
+    top: 16px;
+    left: 10px;
   }
 }

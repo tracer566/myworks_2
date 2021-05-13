@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <title>ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ ДЛЯ БЕЛАЗ</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
      <!-- доп теги для сематики -->
@@ -24,8 +23,8 @@
     <meta property="article:author" content="Алексей Павлютенков" />
      
     <!-- Bootstrap CSS,fonts,magnific -->
-    <link rel="stylesheet" href="css/bootstrap-grid.css" />
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/main.css">
      
@@ -34,8 +33,8 @@
 
   </head>
   <body>
- 
-<header class="header">
+
+<header class="header" id="header">
   <div class="container">
    <div class="row align-items-center justify-content-center">
      <div class="col-lg-4 col-md-3 col-sm-6">
@@ -55,8 +54,8 @@
      <!-- /.col-4 -->
      <div class="col-lg-2 col-md-3 col-sm-6">
         <div class="header-contacts">
-      <div class="header-contacts__phone header-contacts__phone_margin">+7 (818) 247-47-25</div>
-      <div class="header-contacts__phone">+7(818) 247-47-25</div>
+      <div class="header-contacts__phone header-contacts__phone_margin">+7 (818) 247-47-00</div>
+      <div class="header-contacts__phone">+7(818) 247-47-00</div>
     </div>
     <!-- /.header__phone -->
      </div>
@@ -74,6 +73,24 @@
   <!-- /.container -->
 </header>
 <!-- /.header -->
+
+<!-- mobile-menu -->
+<a class="menu-link" href="#menu" title="Открыть меню">
+  <span></span>
+</a>
+<!-- menu -->
+
+<ul class="menu">
+  <li><a href="#header">В начало</a></li>
+  <li><a href="#section-4">Конкретная деталь</a></li>
+  <li><a href="#section-5">Гарантии</a></li>
+  <li><a href="#section-6">Бонусы</a></li>
+  <li><a href="#section-7">Ответы на вопросы</a></li>
+  <li><a href="#section-8">О нас</a></li>
+  <li><a href="#map">Контакты</a></li>
+  <li class="menu_btn"><a href="#section-11">Заказать</a></li>
+</ul>
+<!-- /.menu -->
 
 <section class="main" id="main">
   <div class="container">
@@ -127,30 +144,34 @@
 <!-- /.main -->
 
 <!-- modal-window-1 -->
-<div class="modal">
+<div class="modal" id="modal-1">
   <div class="modal-block">
     <button class="modal-block__close">
       &times;
     </button>
     <!-- /.modal-dialog__close -->
-    <h3 class="modal-block__title">Оставьте ваши контакты и мы вам перезвоним</h3>
-    <form enctype="text/plan" autocomplete="on" action="#" method="GET" class="modal-form" id="modal-form">
-      <input name="user-phone" class="modal-form__input section-4-form__input" required="true" minlength="6" type="tel">
-      <input name="user-email" class="modal-form__input section-4-form__input" type="email">
+    <h3 class="modal-block__title">Оставьте контакты<br>и мы вам перезвоним</h3>
+   <div class="form-wrap">
+      <form autocomplete="on" action="#" method="GET" class="modal-form" id="modal-form">
+      <input name="user-phone" placeholder="Введите ваш телефон" class="modal-form__input section-4-form__input" required minlength="6" type="tel">
+      <input name="user-email" placeholder="Введите вашу почту" class="modal-form__input section-4-form__input" type="email">
       <button class="modal-block__btn button_orange" type="submit">Отправить</button>
     </form>
-    <span class="modal-block__span">Нажимая на кнопку оставить заявку вы соглашаетесь с <a href="img/policy_compressed.pdf" target="_blank">политикой обработки данных</a></span>
-
+    <span class="modal-block__span">Нажимая на кнопку "отправить" вы соглашаетесь с <a href="img/policy_compressed.pdf" target="_blank">политикой обработки персональных данных</a></span>
+   </div>
+   <!-- /.form-wrap -->
+<a class="close__link" href="#">Закрыть окно</a>
   </div>
   <!-- /.modal-form -->
 </div>
 <!-- /.modal -->
 <!-- modal-window-1 -->
+
 <section class="section-2" id="section-2">
   <div class="container">
     <h2 class="section-2__title">
       Получите прайс прямо сейчас <br>
-на электронную почту!
+на электронную почту<span id='mail'></span>!
     </h2>
     <!-- /.section-2__price -->
 <div class="row justify-content-end">
@@ -159,9 +180,9 @@
   <div class="col-lg-8 col-md-9 col-sm-10 col-11">
         <div class="form-block">
       <!-- Здесь форма -->
-      <form autocomplete="on" enctype="text/plan" class="form-block__form" id="form-1" action="#" method="GET">
-        <input required="true" name="user-email" class="form-block__input input_email" type="email" placeholder="Введите ваш e-mail">
-        <input required="true" name="user-phone" class="form-block__input input_tel" type="tel" placeholder="Введите ваш телефон">
+      <form autocomplete="on" class="form-block__form" id="form-1" action="#" method="GET">
+        <input required name="user-email" class="form-block__input input_email" type="email" placeholder="Введите ваш e-mail">
+        <input required name="user-phone" class="form-block__input input_tel" type="tel" placeholder="Введите ваш телефон">
         <textarea disabled class="form-block__textarea">Прайс придет к Вам на почту 
 в течении 5 минут!</textarea>
         <button type="submit" class="form-block__button button_blue">Получить прайс</button>
@@ -179,7 +200,7 @@
 <!-- /#price.price -->
 
 
-<section class="section-3 sections-padding section-icon_blue">
+<section class="section-3 sections-padding section-icon_blue" id="section-3">
 <h2 class="section-3__title">Вам не придется ждать!</h2>
 <!-- /.section__title -->
 <h3 class="section-3__subtitle">Любые запчасти для всех моделей Белаз<br>
@@ -243,15 +264,15 @@
 </section>
 <!-- /.section-3 -->
 
-<section class="section-4 sections-padding">
+<section class="section-4 sections-padding" id="section-4">
   <h2 class="section-4__title">Ищете конкретную деталь?</h2>
 <!-- /.section__title -->
 <h3 class="section-4__subtitle">Если у Вас есть артикул - введите его в поле ниже и получите цену<br>
 ПРЯМО СЕЙЧАС!</h3>
 
-<form enctype="text/plan" class="section-4-form" id="form-2" action="#" method="GET">
+<form class="section-4-form" id="form-2" action="#" method="GET">
   <input class="section-4-form__input" type="text" placeholder="Введите артикул детали">
-  <input autocomplete="on" required="true" name="user-phone" minlength="6" class="section-4-form__input input_tel" type="tel" placeholder="Введите номер телефона">
+  <input autocomplete="on" required name="user-phone" minlength="6" class="section-4-form__input input_tel" type="tel" placeholder="Введите номер телефона">
   <button type="submit" class="section-4-form__btn button_orange">Узнать цену</button>
   <!-- /.section-4-form__btn button_orange -->
 </form>
@@ -260,13 +281,13 @@
 <!-- /.section-4__span -->
 <div class="section-4__div">Или Вы можете перезвонить нам сами:</div>
 <!-- /.section-4__span -->
-<strong class="section-4__phone">+7 (818) 247-47-25</strong>
+<strong class="section-4__phone">+7 (818) 247-47-00</strong>
 <!-- /.section-4__phone -->
 
 </section>
 <!-- /.section-4 sections-padding -->
 
-<section class="section-5 sections-padding">
+<section class="section-5 sections-padding" id="section-5">
   <h2 class="section-5__title section__title">Мы гарантируем сохранность деталей<br>
 во время перевозки!</h2>
   <!-- /.section-5__title section__title -->
@@ -274,7 +295,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 col-12">
         <div class="section-block">
-          <div class="section-block__img"><a href="img/section-5/section_5_img_1.webp" target="_blank"><img src="img/section-5/section_5_img_1.webp" alt="photo"></a></div>
+          <div class="section-block__img"><a class="section-block__item" href="img/section-5/section_5_img_1.webp" target="_blank"><img src="img/section-5/section_5_img_1.webp" alt="photo"></a></div>
           <!-- /.section-block__img -->
           <p class="section-block__descr">Гарантия на целостность поставки
 прописана в договоре</p>
@@ -287,7 +308,7 @@
       <!-- /.col-4 -->
       <div class="col-lg-4 col-md-6 col-12">
         <div class="section-block">
-          <div class="section-block__img"><a href="img/section-5/section_5_img_2.webp" target="_blank"><img src="img/section-5/section_5_img_2.webp" alt="photo"></a></div>
+          <div class="section-block__img"><a class="section-block__item" href="img/section-5/section_5_img_2.webp" target="_blank"><img src="img/section-5/section_5_img_2.webp" alt="photo"></a></div>
           <!-- /.section-block__img -->
           <p class="section-block__descr">Каждая запчасть доставляется с завода
 в жесткой упаковке</p>
@@ -300,7 +321,7 @@
       <!-- /.col-4 -->
       <div class="col-lg-4 col-md-6 col-12">
         <div class="section-block">
-          <div class="section-block__img"><a href="img/section-5/section_5_img_3.webp" target="_blank"><img src="img/section-5/section_5_img_3.webp" alt="photo"></a></div>
+          <div class="section-block__img"><a class="section-block__item" href="img/section-5/section_5_img_3.webp" target="_blank"><img src="img/section-5/section_5_img_3.webp" alt="photo"></a></div>
           <!-- /.section-block__img -->
           <p class="section-block__descr">Дополнительный контроль качества
 нашими специалистами</p>
@@ -319,7 +340,7 @@
 <!-- /.section-5 section-padding -->
 
 
-<section class="section-6 sections-padding section-icon_blue">
+<section class="section-6 sections-padding section-icon_blue" id="section-6">
 <h2 class="section-6__title section__title">У нас разработаны бонусные системы <br>
 и скидки для наших клиентов</h2>
 <!-- /.section__title -->
@@ -388,7 +409,7 @@
 
 <!-- /.section-icon -->
 
-<section class="section-7 sections-padding">
+<section class="section-7 sections-padding" id="section-7">
   <h2 class="section-7__title section__title">У Вас остались вопросы?</h2>
   <!-- /.section-7__title section__title -->
   <h3 class="section-7__subtitle section__subtitle">На Ваши вопросы отвечает Эдуард</h3>
@@ -397,11 +418,11 @@
     <div class="block-questions">
       <div class="block-questions__div">
         <ol class="block-questions__ol">
-          <li>Как заказать деталь правильно?</li>
-          <li>Что делать, если запчасть не понадобилась?</li>
-          <li>Можете ли Вы установить деталь?</li>
-          <li>В чем преимущества оригинальных деталей?</li>
-          <li>В чем преимущества оригинальных деталей?</li>
+          <li class="tooltip" data-answer="Раствор представляет собой радикал. Генетическая связь, как можно показать с помощью тривиальных вычислений">Как заказать деталь правильно?</li>
+          <li class="tooltip" data-answer="Многочисленные расчеты предсказывают, а эксперименты подтверждают, что катализатор плотен">Что делать, если запчасть не понадобилась?</li>
+          <li class="tooltip" data-answer="Самосогласованная модель предсказывает, что при определенных условиях гомолог удален">Можете ли Вы установить деталь?</li>
+          <li class="tooltip" data-answer="Притяжение жестко синтезирует токсичный спирт вне зависимости от самосборки кластеров.">В чем преимущества оригинальных деталей?</li>
+          <li class="tooltip" data-answer="Отсюда видно, что окисление распознает токсичный окислитель, образуя молекулу замещенного ацилпиридина.">В чем преимущества оригинальных деталей?</li>
         </ol>
         <!-- /.block-questions__ul -->
         <button class="block-questions__btn"><img src="img/section-7/icon.png" alt="reload"><a href="#">Еще вопросы</a></button>
@@ -417,9 +438,7 @@
 </section>
 <!-- /.section-7 sections-padding -->
 
-
-
-<section class="section-8 section-icon sections-padding">
+<section class="section-8 section-icon sections-padding" id="section-8">
 <h2 class="section-8__title section__title">С нами удобно работать!</h2>
 <!-- /.section__title -->
 <h3 class="section-8__subtitle section__subtitle">Более 70% клиентов приходят к нам по рекомендации!</h3>
@@ -475,7 +494,7 @@
 
 <!-- /.section-8-icon -->
 
-<section class="section-9 sections-padding">
+<section class="section-9 sections-padding" id="section-9">
   <h2 class=" section-9__title section__title">У нас собственный склад!</h2>
   <!-- /.h2 section-9__title section__title -->
   <h3 class="section-9__subtitle section__subtitle">Это позволяет нам быстро обрабатывать запросы и отгружать детали<br>
@@ -484,17 +503,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-12">
-        <div class="section-9__img"><a href="img/section-9/img_1.webp" target="_blank"><img src="img/section-9/img_1.webp" alt="photo"></a></div>
+        <div class="section-9__img"><a class="section-block__item" href="img/section-9/img_1.webp" target="_blank"><img src="img/section-9/img_1.webp" alt="photo"></a></div>
         <!-- /.section-9__img -->
       </div>
       <!-- /.col-4 -->
       <div class="col-lg-4 col-md-6 col-12">
-        <div class="section-9__img"><a href="img/section-9/img_2.webp" target="_blank"><img src="img/section-9/img_2.webp" alt="photo"></a></div>
+        <div class="section-9__img"><a class="section-block__item" href="img/section-9/img_2.webp" target="_blank"><img src="img/section-9/img_2.webp" alt="photo"></a></div>
         <!-- /.section-9__img -->
       </div>
       <!-- /.col-4 -->
       <div class="col-lg-4 col-md-6 col-12">
-        <div class="section-9__img"><a href="img/section-9/img_3.webp" target="_blank"><img src="img/section-9/img_3.webp" alt="photo"></a></div>
+        <div class="section-9__img"><a class="section-block__item" href="img/section-9/img_3.webp" target="_blank"><img src="img/section-9/img_3.webp" alt="photo"></a></div>
         <!-- /.section-9__img -->
       </div>
       <!-- /.col-4 -->
@@ -505,9 +524,7 @@
 </section>
 <!-- /.section-9 sections-padding -->
 
-
-
-<section class="section-10 section-icon sections-padding">
+<section class="section-10 section-icon sections-padding" id="section-10">
 <h2 class="section-10__title section__title">У нас в штате есть мобильные бригады,<br>
 готовые выехать на сервисное обслуживание,<br>
 ремонт и проведение диагностики!</h2>
@@ -563,14 +580,14 @@
 
 <!-- /.section-10 -->
 
-<section class="section-11 sections-padding">
+<section class="section-11 sections-padding" id="section-11">
   <div class="container">
     <h2 class="section-11__title section__title">Если Вам необходима бесплатная консультация по вопросу обслуживания</h2>
     <!-- /.section__title -->
     <div class="section-11__call">Звоните нам по телефону:</div>
     <!-- /.call -->
-    <h3 class="section-11__phone">+7 (818) 247-47-25</h3>
-    <form enctype="text/plan" autocomplete="on" action="#" id="form-3" method="GET" class="section-11-form">
+    <h3 class="section-11__phone">+7 (818) 247-47-00</h3>
+    <form autocomplete="on" action="#" id="form-3" method="GET" class="section-11-form">
       <input required="true" placeholder="Введите ваш телефон" name="user-phone" class="section-11-form__input form-block__input input_tel" type="tel">
       <button class="section-11-form__btn button_orange">Перезвонить сейчас</button>
       <!-- /.section-11-form__btn button_orange -->
@@ -580,33 +597,39 @@
 </section>
 <!-- /.section-11 sections-padding -->
 
-<section class="section-12 sections-padding">
+<section class="section-12 sections-padding" id="section-12">
   <h2 class="section-12__title section__title">Приезжайте в наш офис!</h2>
     <!-- /.section__title -->
-    <address class="section-12__address">г. Архангельск, Москва-Сити, оф. 3725</address>
+    <address class="section-12__address">г. Архангельск, Москва-Сити, оф. 3700</address>
     <!-- /.call -->
-    <h3 class="section-12__phone">+7 (818) 247-47-25</h3>
+    <h3 class="section-12__phone">+7 (818) 247-47-00</h3>
 </section>
 <!-- /.section-12 sections-padding -->
 
-<section class="section-map">
+<section class="section-map" id="section-map">
   <div class="map" id="map">
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.870823639017!2d40.53240402848369!3d64.55131043902199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44183699f40dba37%3A0x40463caf0fbd2ee3!2z0YPQuy4g0JPQsNC50LTQsNGA0LAsIDMyLCDQkNGA0YXQsNC90LPQtdC70YzRgdC6LCDQkNGA0YXQsNC90LPQtdC70YzRgdC60LDRjyDQvtCx0LsuLCAxNjMwMDE!5e0!3m2!1sru!2sru!4v1620422899259!5m2!1sru!2sru" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.870823639017!2d40.53240402848369!3d64.55131043902199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44183699f40dba37%3A0x40463caf0fbd2ee3!2z0YPQuy4g0JPQsNC50LTQsNGA0LAsIDMyLCDQkNGA0YXQsNC90LPQtdC70YzRgdC6LCDQkNGA0YXQsNC90LPQtdC70YzRgdC60LDRjyDQvtCx0LsuLCAxNjMwMDE!5e0!3m2!1sru!2sru!4v1620422899009!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
   </div>
   <!-- /#map.map -->
 </section>
 <!-- /.section-map -->
+
+<div class="arrow-up" title="Вернуться наверх">
+  <a href="#header"><img src="img/up-arrow.png" alt="arrow"></a>
+</div>
+<!-- /.arrow-up -->
+
 <footer class="footer">
   <div class="container">
     <div class="row align-items-end">
       <div class="col-lg-4 col-md-12 order-lg-0 order-sm-0 order-0"><div class="footer__logo"><a href="#"><img src="img/footer/footer_logo.png" alt="logo"></a></div>
       <!-- /.footer__logo --></div>
       <!-- /.col-4 -->
-      <div class="col-lg-4 col-md-12 order-lg-1 order-sm-2 order-2">Copyright. 2021</div>
+      <div class="col-lg-4 col-md-12 order-lg-1 order-sm-2 order-2">Copyright. 2021 <br><a class="footer__link" href="img/policy_compressed.pdf" target="_blank">Политика конфиденциальности</a></div>
       <!-- /.col-4 -->
       <div class="col-lg-4 col-md-12 order-lg-2 order-sm-1 order-1"><div class="contact-block">
         <span>Есть вопросы? Звоните!</span><br>
-        <span>+7 (818) 247-47-25</span>
+        <span>+7 (818) 247-47-00</span>
       </div>
       <!-- /.contact-block --></div>
       <!-- /.col-4 -->
@@ -619,6 +642,7 @@
 
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/asset.js"></script>
   </body>
 </html>
