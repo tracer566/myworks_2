@@ -57,6 +57,36 @@ $('.main-info').mouseenter(function(){
 $('.main-info').mouseleave(function(){
 	$(this).css('color','black')
 })
+
+ /*секция вопросы-оживление кнопки*/
+ let liLast = $('.block-questions__ol li:last')
+ $('.block-questions__btn').click(function(event){
+ 	event.preventDefault()
+ 	let list = $('.block-questions__ol li').length
+ 		if(list >= 11){
+ 			alert('Последний вопрос-обновите страницу')
+ 		} else {
+ 			liLast.after("<li class='tooltip'>Новый вопрос</li>")
+ 		}
+ })
+
+/*секция вопросы-мини слайдер*/
+$('.block-photo').css('cursor','pointer')
+$('.block-photo img').click(function(){
+	$(this).fadeOut(1000, function(){
+		$(this).attr('src','img/section-7/lenivez.webp').fadeIn(500)
+		$(this).css('width','400px')
+	})
+
+if($(this).attr('src') === 'img/section-7/lenivez.webp'){
+	$(this).fadeOut(1000, function(){
+		$(this).attr('src','img/section-7/section_7_img.webp').fadeIn(500)
+		$(this).css('width','auto')
+	})
+}
+
+	})
+/*секция вопросы-мини слайдер*/
 // неважные скрипты
 
 // menu-mobile
@@ -81,9 +111,17 @@ menuLink_active.click('click',function(){
 	menu.removeClass('menu_active')
 })
 
-
 })
   
-new WOW().init()
+wow = new WOW(
+    {
+    boxClass:     'wow',      // default
+    animateClass: 'animate__animated', // changed
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
+  }
+  )
+  wow.init();
 
  
